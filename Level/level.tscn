@@ -42,7 +42,7 @@ use_collision = true
 size = Vector3(2.18738, 1, 18.5942)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Marker3DPlayerSpawn"]
-transform = Transform3D(0.80914, -0.587616, 0, 0.587616, 0.80914, 0, 0, 0, 1, 2.17354, -4.00106, -8.79712)
+transform = Transform3D(0.905868, 0.340564, -0.251833, -0.339174, 0.939377, 0.0503159, 0.253702, 0.0398357, 0.966462, -7.11575, -2.75316, -9.15639)
 use_collision = true
 size = Vector3(2.18738, 1, 18.5942)
 
@@ -52,7 +52,7 @@ use_collision = true
 radius = 2.40232
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="Marker3DPlayerSpawn"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19895, -4.18467, -3.35719)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32364, -4.07775, -18.3435)
 use_collision = true
 polygon = PackedVector2Array(0, 0, 0.382814, 0.64106, 0.926303, 0.669088, 1.33784, 0.981656, 1.65485, 0.466817, 1, 0, 0.580101, 0.258766, 0.323676, 0.016762)
 mode = 2
@@ -67,6 +67,9 @@ path_u_distance = 1.0
 path_joined = false
 
 [node name="Player" parent="." node_paths=PackedStringArray("start_Marker3D") instance=ExtResource("2_6fl4n")]
+default_speed = 15.0
+running_speed_multiplier = 15.0
+jump_velocity = 4.8
 start_Marker3D = NodePath("../Marker3DPlayerSpawn")
 game_end_time = 10
 
@@ -85,7 +88,7 @@ polygon = PackedVector2Array(0, 0, 0, 100, 100, 100, 100, 0)
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 
 [node name="LevelExit" parent="." instance=ExtResource("3_x52p5")]
-transform = Transform3D(0.396523, 0, 0.918025, 0, 1, 0, -0.918025, 0, 0.396523, -6.67384, -0.771372, -3.28981)
+transform = Transform3D(0.988346, 0, -0.152227, 0, 1, 0, 0.152227, 0, 0.988346, -10.6935, 0.954104, 2.45225)
 
 [node name="PickupMelee" parent="." instance=ExtResource("4_2x8u5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.397982, -1.84006, -12.5455)
@@ -94,9 +97,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.397982, -1.84006, -12.5455)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.397982, -1.84006, -4.10151)
 
 [node name="GunTarget" parent="." instance=ExtResource("5_2bndh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33755, 0, -2.68019)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.76569, 0, -19.1046)
 
 [node name="GunTarget2" parent="." instance=ExtResource("5_2bndh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.50262, 0, -3.33994)
+transform = Transform3D(0.999993, 0, -0.0037699, 0, 1, 0, 0.0037699, 0, 0.999993, -5.97931, 0, -5.15571)
 
 [connection signal="body_entered" from="DeathPit/Area3D" to="." method="_on_area_3d_body_entered"]
